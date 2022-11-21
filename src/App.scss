@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  background-image: url('./images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  @media (width <= 700px){
+    background-image: url('./images/bg-main-mobile.png');
+    flex-direction: column;
+    background-size: contain;
+  }
+}

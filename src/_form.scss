@@ -1,0 +1,128 @@
+button{
+    background: var(--very-dark-violet);
+    padding: 3% 5%;
+    color: var(--white);
+    height: 50px;
+    border-radius: .75em;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+}
+.complete{
+  flex: 50%; 
+  align-self: center;
+  color: var(--very-dark-violet);
+  text-align: center;
+  font: normal 500 18px/14px 'Space Grotesk';
+  h2{
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: 400;
+  }
+  button{
+    max-width: 423px;
+    padding: 0%;
+    margin-top: 30px;
+  }
+  img{
+    transform: scale(1.5);
+    margin-bottom: 1em;
+  }
+}
+div.form{
+    color: var(--very-dark-violet);
+    padding-top: 120px;
+    text-align: left;
+    display: grid;
+    grid-template-areas: "label1 label1 label1"
+                         "input1 input1 input1"
+                         "label2 label2 label2"
+                         "input2 input2 input2"
+                         "span1 span1 span1"
+                         "label3 label3 label4"
+                         "input3 input4 input5"
+                         "span2 span3 span4"
+                         "submit submit submit";
+    text-transform: uppercase;
+    font: normal 500 18px/14px 'Space Grotesk';
+    letter-spacing: .25rem;
+    .labelForName{
+        grid-area: label1;
+    }
+    .labelForNumber{
+        grid-area: label2;
+    }
+    .labelForDate{
+        grid-area: label3;
+    }
+    .labelForCVC{
+        grid-area: label4;
+    }
+    input{
+        margin-bottom: 1em;
+        padding: 1% 5%;
+        height: 40px;
+        border-radius: 1em;
+        outline: none;
+        border: 1px solid  var(--dark-gray-violet);
+        color: var(--very-dark-violet);
+    }
+    input::placeholder{
+        color: var(--light-gray-violet);
+    }
+    input#cardHolderName{
+        grid-area: input1;
+    }
+    input#cardNumber{
+        grid-area: input2;
+    }
+    input#expMonth{
+        grid-area: input3;
+    }
+    input#expYear{
+        grid-area: input4;
+    }
+    input#expYear, input#expMonth{
+        width: 75%;
+    }
+    input#CVC{
+        grid-area: input5;
+    }
+    .CVC{
+        grid-area: e;
+    }
+    input.error{
+        border-color: var(--error-input-color);
+
+    }
+    .error-text{
+        color: var(--error-input-color);
+        text-transform: none;
+        font-size: 14px;
+        letter-spacing: normal;
+    }
+    .span1{
+        grid-area: span1;
+    }
+    .span2{
+        grid-area: span2;
+    }
+    .span3{
+        grid-area: span3;
+    }
+    .span4{
+        grid-area: span4;
+    }
+    button.submitBtn{
+        grid-area: submit;
+    }
+    @media (width <= 700px){
+        padding: 0;
+        label{
+            margin-bottom: 1em;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+    }
+}

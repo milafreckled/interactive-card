@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import 'card';
+@import 'form';
+
+:root{
+  --active-input-color: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --error-input-color: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray-violet: hsl(270, 3%, 87%); 
+  --dark-gray-violet: hwb(279 52% 42%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Space Grotesk' sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
