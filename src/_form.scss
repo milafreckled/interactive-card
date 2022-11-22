@@ -46,6 +46,9 @@ div.form{
     text-transform: uppercase;
     font: normal 500 18px/14px 'Space Grotesk';
     letter-spacing: .25rem;
+    label{
+        margin-top: 1em;
+    }
     .labelForName{
         grid-area: label1;
     }
@@ -59,7 +62,6 @@ div.form{
         grid-area: label4;
     }
     input{
-        margin-bottom: 1em;
         padding: 1% 5%;
         height: 40px;
         border-radius: 1em;
@@ -115,6 +117,7 @@ div.form{
     }
     button.submitBtn{
         grid-area: submit;
+        margin-top: 1em;
     }
     @media (width <= 700px){
         padding: 0;

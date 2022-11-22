@@ -25,29 +25,27 @@ const saveValue = (e) => {
     setData({...data, [name]: value});
   };
 
-const cardNumberRegex = new RegExp('^\d{16}$');
 
 const onSubmit = (e) => {
-  console.log("Data:", data);
   setIsSubmitting(true);
-  const rightRegex = cardNumberRegex.test(data.cardNumber.replace('/\s/g', ''));
+  const rightRegex = /\d{16}$/.test(data.cardNumber.replace(/\s/g, ''));
   if (!rightRegex){
     setCardNumberError("Wrong format, numbers only");
     console.log(1);
   };
-  if (data.cardNumber === ''){
+  if (data.cardNumber === '' || data.cardNumber === defaultData.cardNumber){
     setCardNumberError("Can't be blank");
     console.log(2);
   };
-  if (data.expMonth === ''){
+  if (data.expMonth === '' || data.expMonth === defaultData.expMonth){
     setMonthError("Can't be blank");
     console.log(3);
   };
-  if (data.expYear === ''){
+  if (data.expYear === '' || data.expYear === defaultData.expYear){
     setYearError("Can't be blank");
     console.log(4);
   };
-  if (data.CVC === ''){
+  if (data.CVC === '' || data.CVC === defaultData.CVC){
     setCVCError("Can't be blank");
     console.log(5);
   };
